@@ -1,0 +1,24 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  color: #343a40;
+}
+
+h4 {
+  color: #6c757d;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 8px;
+}
+
+button {
+  border-radius: 8px;
+}
