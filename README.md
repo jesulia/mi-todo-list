@@ -70,25 +70,45 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 =======
-To Do List - Control de Tareas y Metas Personales
+# To Do List - Control de Tareas y Metas Personales
 
 Este proyecto es una aplicación web creada en React utilizando React Bootstrap y estilos personalizados en CSS, diseñada para ayudarte a llevar el control de tus tareas y metas personales. Cada tarea puede tener una fecha límite para facilitar el seguimiento de tus objetivos.
 
-Características
+## Características
 
 - Agregar tareas nuevas con nombre y fecha límite.
 - Interfaz responsiva y amigable.
 - Diseño basado en React Bootstrap.
 - Estilos externos mediante `style.css` (sin estilos en línea).
+- Backend en Node.js + Express que permite gestionar tareas y metas personales.
 
-Tecnologías utilizadas
+## Endpoints del backend
+
+La aplicación incluye un servidor backend hecho con **Node.js** y **Express** que expone los siguientes endpoints:
+
+- `GET /getTasks` - Obtener la lista de tareas.
+- `GET /getGoals` - Obtener la lista de metas.
+- `POST /addTask` - Agregar una tarea.
+- `POST /addGoal` - Agregar una meta.
+- `DELETE /removeTask` - Eliminar una tarea.
+- `DELETE /removeGoal` - Eliminar una meta.
+
+### Códigos de respuesta utilizados
+
+- **Status 200**: Operación exitosa.
+- **Status 400**: Error por parámetros incorrectos al agregar o eliminar tareas o metas.
+- **Status 401**: Error de autenticación por API Key incorrecta.
+
+## Tecnologías utilizadas
 
 - React
+- Node.js (versión LTS)
+- Express
 - React Bootstrap
 - Bootstrap 5
 - CSS personalizado (archivo `style.css`)
 
-Requisitos
+## Requisitos
 
 Antes de ejecutar este proyecto necesitas tener instalado:
 
@@ -96,10 +116,14 @@ Antes de ejecutar este proyecto necesitas tener instalado:
 - Git (opcional, para clonar desde GitHub)
 - Visual Studio Code (opcional pero recomendado)
 
-Instalación y ejecución local
+## Instalación y ejecución local
+
+### Frontend
 
 1. Clona este repositorio en tu computadora:
-git clone https://github.com/jesulia/mi-todo-list/new/main
+   ```bash
+   git clone https://github.com/jesulia/mi-todo-list
+
 2. Entra a la carpeta del proyecto:
 cd mi-todo-list
 3. Instala las dependencias necesarias:
