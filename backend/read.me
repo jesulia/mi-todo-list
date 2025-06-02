@@ -1,0 +1,73 @@
+# To Do List - Backend (API REST)
+
+Este es el backend del proyecto **To Do List – Control de Tareas y Metas Personales**, desarrollado con **Node.js** y **Express**. Expone una API REST con autenticación mediante API Key y conexión a una base de datos (MongoDB o MySQL, según configuración del archivo `db.js`).
+
+## Características principales
+
+- API RESTful para gestionar tareas y metas.
+- Autenticación por API Key en los encabezados HTTP.
+- Conexión a base de datos (MongoDB o MySQL).
+- Listado, creación y eliminación de tareas/metas.
+
+---
+
+## Endpoints disponibles
+
+| Método | Endpoint       | Descripción                    |
+|--------|----------------|--------------------------------|
+| GET    | `/getTasks`    | Obtener todas las tareas       |
+| GET    | `/getGoals`    | Obtener todas las metas        |
+| POST   | `/addTask`     | Agregar una nueva tarea        |
+| POST   | `/addGoal`     | Agregar una nueva meta         |
+| DELETE | `/removeTask`  | Eliminar una tarea por ID      |
+| DELETE | `/removeGoal`  | Eliminar una meta por ID       |
+
+> ⚠️ Todos los endpoints requieren enviar el header:  
+> `Authorization: TU_API_KEY`
+
+---
+
+## Requisitos
+
+- Node.js (versión LTS recomendada)
+- npm o yarn
+- MongoDB o MySQL configurado localmente o en la nube
+
+---
+
+## Instalación y ejecución
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/TU_USUARIO/mi-todo-list-backend.git
+cd mi-todo-list-backend
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Configurar API Key y base de datos en db.js
+
+# 4. Ejecutar servidor
+node server.js
+El servidor quedará disponible en:
+http://localhost:5000
+
+Seguridad
+Este backend requiere que cada solicitud incluya una API Key válida como header:
+Authorization: TU_API_KEY
+
+Sin la clave correcta, el servidor responderá con error 401 (Unauthorized).
+
+Tecnologías utilizadas
+Node.js
+
+Express.js
+
+MongoDB o MySQL
+
+Docker (opcional para despliegue)
+
+dotenv (si deseas parametrizar la configuración en .env)
+
+Autor
+Desarrollado por: Jesuli Arias
